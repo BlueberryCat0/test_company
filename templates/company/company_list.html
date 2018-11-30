@@ -1,0 +1,5 @@
+{% for company in company_list %}
+
+  <a href="{% url 'main:company' pk=company.pk %}">{{company}}</a>
+
+{% endfor %}

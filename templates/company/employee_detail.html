@@ -1,0 +1,14 @@
+<div class="">
+  {{employee.name}}
+</div>
+<div class="">
+  <a href="{% url 'main:department' pk=employee.department.pk %}">{{employee.department}}</a>
+</div>
+<div class="">
+  {{employee.fio}}
+  {{employee.email}}
+  {{employee.address}}
+  {{employee.phone}}
+</div>
+
+<a href="{% url 'main:update-employee' pk=employee.pk %}">Edit me</a>

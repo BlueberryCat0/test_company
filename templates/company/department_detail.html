@@ -1,0 +1,17 @@
+{{department}}
+<div class="">
+  Руководитель <a href="{% url 'main:employee' pk=department.ruler.pk %}">{{department.ruler}}</a>
+</div>
+<div class="">
+  <a href="{% url 'main:company' pk=department.company.pk %}">{{department.company}}</a>
+</div>
+<div class="">
+  ===========
+</div>
+{% for employee in department.employee_set.all %}
+  <div class="">
+    <a href="{% url 'main:employee' pk=employee.pk %}">{{employee}}</a>
+  </div>
+{% endfor %}
+
+<a href="{% url 'main:update-department' pk=department.pk %}">EDIT</a>

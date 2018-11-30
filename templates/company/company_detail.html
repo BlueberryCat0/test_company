@@ -1,0 +1,16 @@
+КОМПАНИЯ
+
+<div class="">
+  {{company.name}}
+</div>
+<div class="">
+  {{company.ruler}}
+</div>
+<div class="">
+  ----------------------
+</div>
+{% for department in company.department_set.all %}
+  <div class="">
+    <a href="{% url 'main:department' pk=department.pk %}">{{department}}</a>
+  </div>
+{% endfor %}
